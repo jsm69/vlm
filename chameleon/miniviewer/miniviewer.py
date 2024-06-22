@@ -247,7 +247,7 @@ def main(data_path, model_size):
         daemon=True,
     ).start()
     threading.Thread(target=queue_position_thread, daemon=True).start()
-    socketio.run(app, debug=False)
+    socketio.run(app, debug=False, host='0.0.0.0')
 
 
 if __name__ == "__main__":
